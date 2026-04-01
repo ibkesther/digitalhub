@@ -1,240 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beginner Skills to Make Money Online</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Beginner Guide to Making Money Online with Skills</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; color: #333; background-color: #f0f4f8; }
+    a { text-decoration: none; color: inherit; }
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    /* Hero Section */
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .hero-cta a {
+      margin-top: 30px;
+      display: inline-block;
+      background-color: #ff7f50;
+      color: white;
+      padding: 18px 50px;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .hero-cta a:hover {
+      background-color: #ff9966;
+      transform: translateY(-3px);
+    }
 
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
+    /* Main Container */
+    .container { max-width: 1100px; margin: 0 auto; padding: 60px 20px; }
 
-body{
-font-family:'Roboto',sans-serif;
-background:#f0f4f8;
-color:#333;
-line-height:1.6;
-}
+    /* Book Section */
+    .book-section {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+    .book-image { flex: 1 1 300px; text-align: center; }
+    .book-image img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .book-image img:hover { transform: scale(1.05); }
+    .book-details { flex: 2 1 500px; }
+    .book-details h2 { font-family: 'Montserrat', sans-serif; color: #1e3c72; font-size: 2rem; margin-bottom: 20px; }
+    .book-details p { margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; }
 
-header{
-background:linear-gradient(135deg,#1e3c72,#2a5298);
-color:white;
-text-align:center;
-padding:80px 20px;
-}
+    .book-details .cta {
+      display: inline-block;
+      background-color: #ff7f50;
+      color: white;
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .book-details .cta:hover {
+      background-color: #ff9966;
+      transform: translateY(-3px);
+    }
 
-header h1{
-font-family:'Montserrat',sans-serif;
-font-size:2.2rem;
-margin-bottom:15px;
-}
+    /* Story Section */
+    .story {
+      margin-bottom: 80px;
+    }
+    .story h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2a5298;
+    }
+    .story p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
 
-header p{
-max-width:700px;
-margin:0 auto;
-}
+    /* Benefits Section */
+    .benefits {
+      background-color: #eaf0f8;
+      padding: 60px 20px;
+      border-radius: 15px;
+      margin-bottom: 80px;
+    }
+    .benefits h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1e3c72;
+    }
+    .benefits-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .benefit {
+      flex: 1 1 250px;
+      background-color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .benefit:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .benefit h3 { color: #2a5298; margin-bottom: 15px; }
+    .benefit p { font-size: 1rem; line-height: 1.6; }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:50px 20px;
-}
+    /* Testimonials Section */
+    .testimonials {
+      background-color: #dbe8f7;
+      padding: 60px 20px;
+      border-radius: 15px;
+      margin-bottom: 80px;
+    }
+    .testimonials h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #1e3c72;
+    }
+    .testimonial-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+    .testimonial {
+      flex: 1 1 250px;
+      background-color: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-style: italic;
+    }
+    .testimonial p { margin-bottom: 15px; }
+    .testimonial span { font-weight: bold; color: #2a5298; }
 
-.skills{
-margin-bottom:60px;
-}
+    /* Final CTA Section */
+    .final-cta {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      border-radius: 15px;
+      margin-bottom: 40px;
+    }
+    .final-cta h2 { font-family: 'Montserrat', sans-serif; font-size: 2.5rem; margin-bottom: 20px; }
+    .final-cta a {
+      background-color: #ff7f50;
+      color: white;
+      padding: 20px 50px;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.3s;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .final-cta a:hover { background-color: #ff9966; transform: translateY(-3px); }
 
-.skills h2{
-text-align:center;
-color:#1e3c72;
-margin-bottom:10px;
-}
+    /* Footer */
+    footer { text-align: center; padding: 20px; font-size: 0.9rem; color: #555; }
 
-.skills-intro{
-text-align:center;
-max-width:700px;
-margin:0 auto 30px;
-}
-
-.skills-grid{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-}
-
-.skill-card{
-flex:1 1 260px;
-background:white;
-padding:25px;
-border-radius:12px;
-box-shadow:0 5px 15px rgba(0,0,0,0.08);
-transition:.3s;
-}
-
-.skill-card:hover{
-transform:translateY(-5px);
-}
-
-.skill-card h3{
-color:#2a5298;
-margin-bottom:10px;
-}
-
-.skill-card ul{
-margin-top:10px;
-padding-left:18px;
-}
-
-.skill-card li{
-margin-bottom:6px;
-font-size:0.95rem;
-}
-
-.mailer{
-background:#1e3c72;
-color:white;
-padding:50px 20px;
-border-radius:12px;
-text-align:center;
-}
-
-.mailer input{
-width:100%;
-max-width:320px;
-padding:14px;
-border:none;
-border-radius:6px;
-margin-top:15px;
-}
-
-.mailer button{
-background:#ff7f50;
-color:white;
-border:none;
-padding:14px 30px;
-margin-top:15px;
-border-radius:30px;
-font-weight:bold;
-cursor:pointer;
-}
-
-footer{
-text-align:center;
-padding:20px;
-font-size:.9rem;
-color:#555;
-}
-
-@media(max-width:768px){
-header h1{font-size:1.7rem;}
-.skills-grid{flex-direction:column;}
-}
-</style>
+    /* Responsive */
+    @media(max-width: 900px) {
+      .book-section { flex-direction: column; gap: 30px; }
+      .benefits-list, .testimonial-list { flex-direction: column; }
+    }
+  </style>
 </head>
-
 <body>
 
-<header>
-<h1>Beginner Skills You Can Use to Make Money Online</h1>
-<p>Explore beginner-friendly skills you can learn and turn into income opportunities. Choose one and start building from there.</p>
-</header>
+  <!-- Hero Section -->
+  <header>
+    <h1>The Beginner Guide to Making Money Online with Skills</h1>
+    <p>Stop dreaming and start earning! Discover how to turn your skills into real online income, even if you’ve never made money online before.</p>
+    <div class="hero-cta">
+      <a href="https://selar.com/yv412en945">Grab Your Copy Now</a>
+    </div>
+  </header>
 
-<div class="container">
+  <div class="container">
 
-<section class="skills">
-<h2>Choose a Skill to Start With</h2>
+    <!-- Book Section -->
+    <section class="book-section">
+      <div class="book-image">
+        <img src="esther image 3.png" alt="Book Cover">
+      </div>
+      <div class="book-details">
+        <h2>About the Book</h2>
+        <p>
+          Everyone dreams of making money online but most struggle with where to start. This book gives you a clear, simple, and practical roadmap** to earn income from your skills. 
+        </p>
+        <p>
+          You’ll learn how to identify marketable skills, find clients, sell services, and even create passive income streams online. No fluff, no confusing jargon just actionable steps you can implement today.
+        </p>
+        <a href="https://selar.com/yv412en945" class="cta">Get Your Copy Today</a>
+      </div>
+    </section>
 
-<p class="skills-intro">
-Each of these skills is beginner-friendly. This overview helps you understand what each one involves before deciding which to learn.
-</p>
+    <!-- Story Section -->
+    <section class="story">
+      <h2>Why You Need This Book</h2>
+      <p>
+        You don’t need a big audience, expensive tools, or years of experience to start making money online. This beginner-friendly guide shows you how to start from scratch, even if you have zero followers and only your phone.
+      </p>
+      <p>
+        Inside this book, you’ll discover simple, practical steps to choose the right path, create content that attracts attention, and position yourself for your first online sale. No complicated strategies just clear direction designed for beginners who are ready to take action.
+      </p>
+      <p>
+        If you’ve been confused about where to start, overwhelmed by too many options, or tired of watching others succeed while you’re stuck, this book will help you focus and move forward. Your first step toward building an online income starts here.
+      </p>
+    </section>
 
-<div class="skills-grid">
+    <!-- Benefits Section -->
+    <section class="benefits">
+      <h2>What You’ll Gain</h2>
+      <div class="benefits-list">
+        <div class="benefit">
+          <h3>Freelance With Confidence</h3>
+          <p>Learn how to pitch your skills, get clients, and start making money—even if you’ve never freelanced before.</p>
+        </div>
+        <div class="benefit">
+          <h3>Sell Skills You Already Have</h3>
+          <p>Discover which everyday skills are in high demand and how to turn them into online income streams.</p>
+        </div>
+        <div class="benefit">
+          <h3>Passive Income Opportunities</h3>
+          <p>Learn how to create income streams that keep paying even when you’re not actively working.</p>
+        </div>
+        <div class="benefit">
+          <h3>Fast Action, Real Results</h3>
+          <p>Step-by-step guidance ensures you take action and see results quickly, without getting stuck in endless theory.</p>
+        </div>
+      </div>
+    </section>
 
-<div class="skill-card">
-<h3>Content Creation</h3>
-<p>Create helpful or entertaining content online.</p>
-<ul>
-<li>Instagram posts</li>
-<li>Short videos</li>
-<li>Educational carousels</li>
-<li>Audience building</li>
-</ul>
-</div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>Readers Love It</h2>
+      <div class="testimonial-list">
+        <div class="testimonial">
+          <p>"This book transformed how I think about online work. I landed my first client within one month!"</p>
+          <span>- Jane D.</span>
+        </div>
+        <div class="testimonial">
+          <p>"Clear, motivating, and practical. I finally feel I have a roadmap to earn online."</p>
+          <span>- Michael K.</span>
+        </div>
+        <div class="testimonial">
+          <p>"Step-by-step guidance that really works. I’ve already started generating income from my skills."</p>
+          <span>- Sarah L.</span>
+        </div>
+      </div>
+    </section>
 
-<div class="skill-card">
-<h3>Affiliate Marketing</h3>
-<p>Promote products and earn commission.</p>
-<ul>
-<li>No product creation</li>
-<li>Works with social media</li>
-<li>Beginner friendly</li>
-<li>Passive income potential</li>
-</ul>
-</div>
+    <!-- Final CTA Section with MailerLite -->
+    <section class="final-cta">
+      <h2>Take Control of Your Online Income Now</h2>
+      <p>Don’t wait. Your skills can start earning for you today. Grab your copy and start building real online income!</p>
 
-<div class="skill-card">
-<h3>Canva Design</h3>
-<p>Create simple designs for businesses.</p>
-<ul>
-<li>Social media graphics</li>
-<li>Pinterest pins</li>
-<li>Flyers</li>
-<li>Digital products</li>
-</ul>
-</div>
+      <!-- MailerLite Signup Form -->
+      <form id="ml-form" style="margin-top: 20px;">
+        <input type="email" name="email" placeholder="Enter your email" required
+               style="padding: 15px; border-radius: 50px; border: none; width: 250px; max-width: 80%; margin-right: 10px;">
+        <button type="submit"
+                style="padding: 15px 30px; border-radius: 50px; border: none; background-color: #ff7f50; color: white; font-weight: bold; cursor: pointer;">
+          Subscribe
+        </button>
+      </form>
 
-<div class="skill-card">
-<h3>Copywriting</h3>
-<p>Write text that helps businesses sell.</p>
-<ul>
-<li>Sales captions</li>
-<li>Email writing</li>
-<li>Landing pages</li>
-<li>Product descriptions</li>
-</ul>
-</div>
+      <a href="https://selar.com/yv412en945">Get the Book Now</a>
+    </section>
 
-<div class="skill-card">
-<h3>Pinterest Promotion</h3>
-<p>Help brands get traffic using Pinterest.</p>
-<ul>
-<li>Traffic generation</li>
-<li>Affiliate promotion</li>
-<li>Blog growth</li>
-<li>Service-based income</li>
-</ul>
-</div>
+  </div>
 
-</div>
+  <footer>
+    &copy; Esther Digital Hub. All rights reserved.
+  </footer>
 
-</section>
+  <!-- MailerLite Universal -->
+  <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '2230371');
+  </script>
 
-<section class="mailer">
-<h2>Join to Get Beginner Skill Guides</h2>
-<p>Receive simple breakdowns on how to start any of these skills.</p>
-
-<form onsubmit="ml('send','2230371',{email:document.getElementById('email').value});return false;">
-<input type="email" id="email" placeholder="Enter your email" required>
-<br>
-<button type="submit">Join Free</button>
-</form>
-
-</section>
-
-</div>
-
-<footer>
-© Esther Digital Hub
-</footer>
-
-<script>
-(function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-.push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-ml('account','2230371');
-</script>
+  <!-- MailerLite Form Script -->
+  <script>
+    const form = document.getElementById('ml-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = form.email.value;
+      ml('signup', { email: email });
+      alert('Thank you! Check your MailerLite dashboard.');
+      form.reset();
+    });
+  </script>
 
 </body>
 </html>
