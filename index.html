@@ -185,6 +185,8 @@
       font-size: 1.3rem;
       font-weight: bold;
       transition: background 0.3s, transform 0.3s;
+      display: inline-block;
+      margin-top: 15px;
     }
     .final-cta a:hover { background-color: #ff9966; transform: translateY(-3px); }
 
@@ -233,15 +235,12 @@
       <h2>Why You Need This Book</h2>
       <p>
         You don’t need a big audience, expensive tools, or years of experience to start making money online. This beginner-friendly guide shows you how to start from scratch, even if you have zero followers and only your phone.
-
       </p>
       <p>
-Inside this book, you’ll discover simple, practical steps to choose the right path, create content that attracts attention, and position yourself for your first online sale. No complicated strategies just clear direction designed for beginners who are ready to take action.
-        
+        Inside this book, you’ll discover simple, practical steps to choose the right path, create content that attracts attention, and position yourself for your first online sale. No complicated strategies just clear direction designed for beginners who are ready to take action.
       </p>
       <p>
         If you’ve been confused about where to start, overwhelmed by too many options, or tired of watching others succeed while you’re stuck, this book will help you focus and move forward. Your first step toward building an online income starts here.
-
       </p>
     </section>
 
@@ -287,11 +286,21 @@ Inside this book, you’ll discover simple, practical steps to choose the right 
       </div>
     </section>
 
-    <!-- Final CTA Section -->
+    <!-- Final CTA Section with MailerLite -->
     <section class="final-cta">
       <h2>Take Control of Your Online Income Now</h2>
       <p>Don’t wait. Your skills can start earning for you today. Grab your copy and start building real online income!</p>
-      
+
+      <!-- MailerLite Signup Form -->
+      <form id="ml-form" style="margin-top: 20px;">
+        <input type="email" name="email" placeholder="Enter your email" required
+               style="padding: 15px; border-radius: 50px; border: none; width: 250px; max-width: 80%; margin-right: 10px;">
+        <button type="submit"
+                style="padding: 15px 30px; border-radius: 50px; border: none; background-color: #ff7f50; color: white; font-weight: bold; cursor: pointer;">
+          Subscribe
+        </button>
+      </form>
+
       <a href="https://selar.com/yv412en945">Get the Book Now</a>
     </section>
 
@@ -309,7 +318,18 @@ Inside this book, you’ll discover simple, practical steps to choose the right 
       (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
       ml('account', '2230371');
   </script>
-  <!-- End MailerLite Universal -->
+
+  <!-- MailerLite Form Script -->
+  <script>
+    const form = document.getElementById('ml-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const email = form.email.value;
+      ml('signup', { email: email });
+      alert('Thank you! Check your MailerLite dashboard.');
+      form.reset();
+    });
+  </script>
 
 </body>
 </html>
